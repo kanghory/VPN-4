@@ -1,7 +1,7 @@
 #!/bin/bash
 
 BURIQ () {
-    curl -sS https://raw.githubusercontent.com/Andyyuda/permission/main/ipmini > /root/tmp
+    curl -sS https://raw.githubusercontent.com/kanghory/permission/main/ipmini > /root/tmp
     data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
     for user in "${data[@]}"
     do
@@ -19,7 +19,7 @@ BURIQ () {
 }
 
 MYIP=$(curl -sS ipv4.icanhazip.com)
-Name=$(curl -sS https://raw.githubusercontent.com/Andyyuda/permission/main/ipmini | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/kanghory/permission/main/ipmini | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
 CekOne=$(cat /usr/local/etc/.$Name.ini)
 
@@ -36,7 +36,7 @@ fi
 
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/Andyyuda/permission/main/ipmini | awk '{print $4}' | grep $MYIP)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/kanghory/permission/main/ipmini | awk '{print $4}' | grep $MYIP)
     if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
@@ -54,7 +54,7 @@ PERMISSION
 if [ "$res" = "Expired" ]; then
 Exp="\e[36mExpired\033[0m"
 else
-Exp=$(curl -sS https://raw.githubusercontent.com/Andyyuda/permission/main/ipmini | grep $MYIP | awk '{print $3}')
+Exp=$(curl -sS https://raw.githubusercontent.com/kanghory/permission/main/ipmini | grep $MYIP | awk '{print $3}')
 fi
 
 # =========================================
@@ -254,7 +254,7 @@ export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
 clear
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
-echo -e "\E[44;1;39m                     ⇱ INFORMASI VPS ⇲                        \E[0m"
+echo -e "\E[44;1;39m                     ⇱ INFORMASI VPS KANG HORY TUNNELING ⇲                        \E[0m"
 echo -e "${CYAN}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m${NC}"
 
 echo -e "${BIYellow}□ Server Uptime       = ${GREEN}$( uptime -p  | cut -d " " -f 2-10000 ) ${NC}"
@@ -268,17 +268,17 @@ echo -e "${BIYellow}□ CPU Usage           = $cpu_usage"
 echo -e "${BIYellow}□ Clients Name        = ${GREEN}$Name${NC}"
 echo -e "${BIYellow}□ Expired Script VPS  = ${GREEN}$Exp${NC}"
 echo -e "${BIYellow}□ Time Reboot VPS     = 00:00 ${GREEN}( Jam 12 Malam )${NC}"
-echo -e "${BIYellow}□ License Limit       = ORDER ${GREEN}( 082131861788 )${NC}"
-echo -e "${BIYellow}□ AutoScript By Dev   = Wak ${GREEN}( AndyYuda )${NC}"
+echo -e "${BIYellow}□ License Limit       = ORDER ${GREEN}( 085225171738 )${NC}"
+echo -e "${BIYellow}□ AutoScript By Dev   = SANTRI ${GREEN}( kanghoryTUNNELING )${NC}"
 
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${BICyan} │                  ${BIWhite}${UWhite}ANDYYUDA TUNELING${NC}"
+echo -e "${BICyan} │                  ${BIWhite}${UWhite}KANG HORY TUNELING${NC}"
 echo -e "${BICyan} │"
 echo -e " ${BICyan}│  ${BICyan}Use Core        :  ${BIPurple}XRAY${NC}"
 echo -e " ${BICyan}│  ${BICyan}IP-VPS          :  ${BIYellow}$IPVPS${NC}"
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 
-echo -e "${GREEN}INGATLAH KAWAN DILANGIT MASIH ADA LANGIT JAGAN LUPA DIRI${NC}" 
+echo -e "${GREEN}PINGIN MULYO KUDU WANI REKOSO=PINGIN MULIA HARUS BERANI PAYAH${NC}" 
 
 echo -e "${GREEN}┌──────────────────────────────────────────────────┐${NC}" 
 echo -e "${GREEN}│  \033[0m ${BOLD}${YELLOW}SSH     VMESS       VLESS      TROJAN $NC" 
